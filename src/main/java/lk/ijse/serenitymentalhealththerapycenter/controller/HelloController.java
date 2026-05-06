@@ -1,4 +1,4 @@
-package lk.ijse.serenitymentalhealththerapycenter;
+package lk.ijse.serenitymentalhealththerapycenter.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

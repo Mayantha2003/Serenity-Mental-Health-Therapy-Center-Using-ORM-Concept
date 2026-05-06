@@ -5,4 +5,6 @@ module lk.ijse.serenitymentalhealththerapycenter {
 
     opens lk.ijse.serenitymentalhealththerapycenter to javafx.fxml;
     exports lk.ijse.serenitymentalhealththerapycenter;
+    exports lk.ijse.serenitymentalhealththerapycenter.controller;
+    opens lk.ijse.serenitymentalhealththerapycenter.controller to javafx.fxml;
 }
