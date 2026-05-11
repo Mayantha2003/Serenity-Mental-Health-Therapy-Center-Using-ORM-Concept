@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.serenitymentalhealththerapycenter.controller.DashboardController">
+
+    <children>
+        <!-- HBox fills entire StackPane and resizes with window -->
+        <HBox fx:id="mainContainer" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f0fdf4;">
+
+            <!-- SIDEBAR — Fixed width, full height -->
+            <VBox fx:id="sidebar" alignment="TOP_CENTER" minWidth="220.0" prefWidth="230.0" style="-fx-background-color: linear-gradient(to bottom, #10b981, #059669);" HBox.hgrow="NEVER">
+
+                <!-- Logo Area -->
+                <HBox alignment="CENTER" prefHeight="80.0" spacing="10.0">
+                    <children>
+                        <Label text="🌿" style="-fx-font-size: 28px;" />
+                        <VBox alignment="CENTER_LEFT" spacing="2.0">
+                            <children>
+                                <Label text="Serenity" textFill="white">
+                                    <font><Font name="Arial Bold" size="22.0" /></font>
+                                </Label>
+                                <Label text="Mental Health Center" textFill="#a7f3d0">
+                                    <font><Font name="Arial" size="10.0" /></font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets top="10.0" />
+                    </padding>
+                </HBox>
+
+                <Separator maxWidth="180.0" style="-fx-background-color: #34d399;" />
+
+                <!-- Navigation Buttons -->
+                <VBox alignment="TOP_CENTER" spacing="6.0" style="-fx-padding: 20 15 0 15;">
+                    <children>
+
+                        <Button fx:id="btnDashboard" maxWidth="1.7976931348623157E308" prefHeight="42.0" style="-fx-background-color: rgba(255,255,255,0.15); -fx-background-radius: 10; -fx-text-fill: white; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-font-weight: bold; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 18;" text="🏠  Dashboard">
+                            <font><Font name="Arial Bold" size="13.0" /></font>
+                        </Button>
+
+                        <Button fx:id="btnTherapists" maxWidth="1.7976931348623157E308" prefHeight="42.0" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-text-fill: #d1fae5; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 18;" text="👨‍⚕️  Therapists">
+                            <font><Font name="Arial" size="13.0" /></font>
+                        </Button>
+
+                        <Button fx:id="btnPrograms" maxWidth="1.7976931348623157E308" prefHeight="42.0" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-text-fill: #d1fae5; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 18;" text="📋  Therapy Programs">
+                            <font><Font name="Arial" size="13.0" /></font>
+                        </Button>
+
+                        <Button fx:id="btnPatients" maxWidth="1.7976931348623157E308" prefHeight="42.0" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-text-fill: #d1fae5; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 18;" text="🧑‍⚕️  Patients">
+                            <font><Font name="Arial" size="13.0" /></font>
+                        </Button>
+
+                        <Button fx:id="btnSchedule" maxWidth="1.7976931348623157E308" prefHeight="42.0" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-text-fill: #d1fae5; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 18;" text="📅  Schedule Sessions">
+                            <font><Font name="Arial" size="13.0" /></font>
+                        </Button>
+
+                        <Button fx:id="btnPayments" maxWidth="1.7976931348623157E308" prefHeight="42.0" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-text-fill: #d1fae5; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 18;" text="💳  Payments">
+                            <font><Font name="Arial" size="13.0" /></font>
+                        </Button>
+
+                        <Button fx:id="btnReports" maxWidth="1.7976931348623157E308" prefHeight="42.0" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-text-fill: #d1fae5; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-cursor: hand; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 18;" text="📊  Reports">
+                            <font><Font name="Arial" size="13.0" /></font>
+                        </Button>
+
+                    </children>
+                </VBox>
+
+                <!-- Spacer pushes profile to bottom -->
+                <Pane VBox.vgrow="ALWAYS" />
+
+                <!-- User Profile Area -->
+                <VBox alignment="CENTER" prefHeight="100.0" spacing="5.0" style="-fx-background-color: rgba(0,0,0,0.1); -fx-padding: 10 0 10 0;">
+                    <children>
+                        <Circle fill="#a7f3d0" radius="18.0" stroke="white" strokeWidth="2.0" />
+                        <Label fx:id="lblUsername" text="Admin User" textFill="white">
+                            <font><Font name="Arial Bold" size="13.0" /></font>
+                        </Label>
+                        <Label fx:id="lblRole" text="Administrator" textFill="#a7f3d0">
+                            <font><Font name="Arial" size="11.0" /></font>
+                        </Label>
+                        <Button fx:id="btnLogout" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: rgba(255,255,255,0.2); -fx-background-radius: 14; -fx-text-fill: white; -fx-font-family: 'Arial'; -fx-font-size: 11px; -fx-cursor: hand;" text="🚪 Logout">
+                            <font><Font name="Arial Bold" size="11.0" /></font>
+                        </Button>
+                    </children>
+                </VBox>
+
+            </VBox>
+
+            <!-- MAIN CONTENT — Grows to fill remaining space -->
+            <VBox fx:id="contentArea" style="-fx-background-color: #f0fdf4;" HBox.hgrow="ALWAYS">
+
+                <!-- Header -->
+                <HBox alignment="CENTER_LEFT" prefHeight="60.0" style="-fx-padding: 20 30 10 30;">
+                    <children>
+                        <Label text="Dashboard" textFill="#1f2937">
+                            <font><Font name="Arial Bold" size="28.0" /></font>
+                        </Label>
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Label fx:id="lblDate" text="May 09, 2026" textFill="#6b7280">
+                            <font><Font name="Arial" size="13.0" /></font>
+                        </Label>
+                    </children>
+                </HBox>
+
+                <!-- Scrollable Content -->
+                <VBox spacing="20.0" style="-fx-padding: 10 30 20 30;" VBox.vgrow="ALWAYS">
+
+                    <!-- Stat Cards Grid -->
+                    <GridPane fx:id="statsGrid" hgap="20.0" vgap="20.0" VBox.vgrow="ALWAYS">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="150.0" percentWidth="33.33" />
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="150.0" percentWidth="33.33" />
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="150.0" percentWidth="33.33" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="100.0" prefHeight="120.0" vgrow="ALWAYS" />
+                            <RowConstraints minHeight="100.0" prefHeight="120.0" vgrow="ALWAYS" />
+                        </rowConstraints>
+
+                        <!-- Card 1: Total Patients -->
+                        <VBox style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 4);">
+                            <padding>
+                                <Insets bottom="16.0" left="18.0" right="18.0" top="16.0" />
+                            </padding>
+                            <children>
+                                <Label text="🧑‍⚕️" style="-fx-font-size: 22px;" />
+                                <Label fx:id="lblTotalPatients" text="0" textFill="#1f2937" VBox.vgrow="ALWAYS">
+                                    <font><Font name="Arial Bold" size="26.0" /></font>
+                                    <VBox.vgrow>ALWAYS</VBox.vgrow>
+                                </Label>
+                                <Label text="Total Patients" textFill="#6b7280">
+                                    <font><Font name="Arial" size="12.0" /></font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <!-- Card 2: Total Therapists -->
+                        <VBox GridPane.columnIndex="1" style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 4);">
+                            <padding>
+                                <Insets bottom="16.0" left="18.0" right="18.0" top="16.0" />
+                            </padding>
+                            <children>
+                                <Label text="👨‍⚕️" style="-fx-font-size: 22px;" />
+                                <Label fx:id="lblTotalTherapists" text="0" textFill="#1f2937" VBox.vgrow="ALWAYS">
+                                    <font><Font name="Arial Bold" size="26.0" /></font>
+                                    <VBox.vgrow>ALWAYS</VBox.vgrow>
+                                </Label>
+                                <Label text="Total Therapists" textFill="#6b7280">
+                                    <font><Font name="Arial" size="12.0" /></font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <!-- Card 3: Active Programs -->
+                        <VBox GridPane.columnIndex="2" style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 4);">
+                            <padding>
+                                <Insets bottom="16.0" left="18.0" right="18.0" top="16.0" />
+                            </padding>
+                            <children>
+                                <Label text="📋" style="-fx-font-size: 22px;" />
+                                <Label fx:id="lblTotalPrograms" text="5" textFill="#1f2937" VBox.vgrow="ALWAYS">
+                                    <font><Font name="Arial Bold" size="26.0" /></font>
+                                    <VBox.vgrow>ALWAYS</VBox.vgrow>
+                                </Label>
+                                <Label text="Active Programs" textFill="#6b7280">
+                                    <font><Font name="Arial" size="12.0" /></font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <!-- Card 4: Today's Sessions -->
+                        <VBox GridPane.rowIndex="1" style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 4);">
+                            <padding>
+                                <Insets bottom="16.0" left="18.0" right="18.0" top="16.0" />
+                            </padding>
+                            <children>
+                                <Label text="📅" style="-fx-font-size: 22px;" />
+                                <Label fx:id="lblTodaySessions" text="0" textFill="#1f2937" VBox.vgrow="ALWAYS">
+                                    <font><Font name="Arial Bold" size="26.0" /></font>
+                                    <VBox.vgrow>ALWAYS</VBox.vgrow>
+                                </Label>
+                                <Label text="Today's Sessions" textFill="#6b7280">
+                                    <font><Font name="Arial" size="12.0" /></font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <!-- Card 5: Pending Payments -->
+                        <VBox GridPane.columnIndex="1" GridPane.rowIndex="1" style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 4);">
+                            <padding>
+                                <Insets bottom="16.0" left="18.0" right="18.0" top="16.0" />
+                            </padding>
+                            <children>
+                                <Label text="💳" style="-fx-font-size: 22px;" />
+                                <Label fx:id="lblPendingPayments" text="0" textFill="#1f2937" VBox.vgrow="ALWAYS">
+                                    <font><Font name="Arial Bold" size="26.0" /></font>
+                                    <VBox.vgrow>ALWAYS</VBox.vgrow>
+                                </Label>
+                                <Label text="Pending Payments" textFill="#6b7280">
+                                    <font><Font name="Arial" size="12.0" /></font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <!-- Card 6: Monthly Revenue -->
+                        <VBox GridPane.columnIndex="2" GridPane.rowIndex="1" style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 4);">
+                            <padding>
+                                <Insets bottom="16.0" left="18.0" right="18.0" top="16.0" />
+                            </padding>
+                            <children>
+                                <Label text="💰" style="-fx-font-size: 22px;" />
+                                <Label fx:id="lblMonthlyRevenue" text="LKR 0" textFill="#1f2937" VBox.vgrow="ALWAYS">
+                                    <font><Font name="Arial Bold" size="22.0" /></font>
+                                    <VBox.vgrow>ALWAYS</VBox.vgrow>
+                                </Label>
+                                <Label text="Monthly Revenue" textFill="#6b7280">
+                                    <font><Font name="Arial" size="12.0" /></font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                    </GridPane>
+
+                    <!-- Quick Actions Panel -->
+                    <VBox style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 4);" VBox.vgrow="ALWAYS">
+                        <padding>
+                            <Insets bottom="20.0" left="22.0" right="22.0" top="16.0" />
+                        </padding>
+                        <children>
+                            <Label text="Quick Actions" textFill="#1f2937">
+                                <font><Font name="Arial Bold" size="16.0" /></font>
+                            </Label>
+
+                            <HBox spacing="16.0" style="-fx-padding: 14 0 0 0;" VBox.vgrow="ALWAYS">
+                                <children>
+
+                                    <Button fx:id="btnQuickRegister" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ecfdf5; -fx-background-radius: 12; -fx-text-fill: #059669; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-font-weight: bold; -fx-cursor: hand; -fx-border-color: #a7f3d0; -fx-border-radius: 12;" text="➕ Register Patient" HBox.hgrow="ALWAYS">
+                                        <font><Font name="Arial Bold" size="13.0" /></font>
+                                    </Button>
+
+                                    <Button fx:id="btnQuickSchedule" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ecfdf5; -fx-background-radius: 12; -fx-text-fill: #059669; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-font-weight: bold; -fx-cursor: hand; -fx-border-color: #a7f3d0; -fx-border-radius: 12;" text="📅 New Session" HBox.hgrow="ALWAYS">
+                                        <font><Font name="Arial Bold" size="13.0" /></font>
+                                    </Button>
+
+                                    <Button fx:id="btnQuickPayment" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ecfdf5; -fx-background-radius: 12; -fx-text-fill: #059669; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-font-weight: bold; -fx-cursor: hand; -fx-border-color: #a7f3d0; -fx-border-radius: 12;" text="💳 Process Payment" HBox.hgrow="ALWAYS">
+                                        <font><Font name="Arial Bold" size="13.0" /></font>
+                                    </Button>
+
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+
+                </VBox>
+
+            </VBox>
+
+        </HBox>
+    </children>
+
+</StackPane>

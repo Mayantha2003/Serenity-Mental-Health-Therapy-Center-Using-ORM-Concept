@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="contentRoot" prefHeight="610.0" prefWidth="920.0" spacing="16.0" style="-fx-background-color: #f0fdf4; -fx-padding: 20 30 20 30;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.serenitymentalhealththerapycenter.controller.ReportController">
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" prefHeight="50.0" spacing="10.0">
+        <children>
+            <Label text="Reports &amp; Analytics" textFill="#1f2937">
+                <font><Font name="Arial Bold" size="28.0" /></font>
+            </Label>
+            <Pane HBox.hgrow="ALWAYS" />
+        </children>
+    </HBox>
+
+    <!-- Filter Card -->
+    <VBox spacing="14.0" style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 4);">
+        <padding>
+            <Insets bottom="18.0" left="22.0" right="22.0" top="18.0" />
+        </padding>
+        <children>
+            <Label text="Report Filters" textFill="#1f2937">
+                <font><Font name="Arial Bold" size="16.0" /></font>
+            </Label>
+
+            <GridPane hgap="16.0" vgap="12.0" VBox.vgrow="NEVER">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" minWidth="150.0" percentWidth="25.0" />
+                    <ColumnConstraints hgrow="ALWAYS" minWidth="150.0" percentWidth="25.0" />
+                    <ColumnConstraints hgrow="ALWAYS" minWidth="150.0" percentWidth="25.0" />
+                    <ColumnConstraints hgrow="ALWAYS" minWidth="150.0" percentWidth="25.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="30.0" vgrow="NEVER" />
+                    <RowConstraints minHeight="42.0" vgrow="NEVER" />
+                </rowConstraints>
+
+                <Label text="Report Type" textFill="#374151" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <font><Font name="Arial Bold" size="12.0" /></font>
+                </Label>
+                <Label text="From Date" textFill="#374151" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <font><Font name="Arial Bold" size="12.0" /></font>
+                </Label>
+                <Label text="To Date" textFill="#374151" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                    <font><Font name="Arial Bold" size="12.0" /></font>
+                </Label>
+                <Label text="Therapist / Program" textFill="#374151" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                    <font><Font name="Arial Bold" size="12.0" /></font>
+                </Label>
+
+                <ComboBox fx:id="cmbReportType" prefHeight="32.0" prefWidth="217.0" style="-fx-background-color: #d1fae5; -fx-border-color: #6ee7b7; -fx-border-radius: 10; -fx-background-radius: 10; -fx-font-size: 13px;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <DatePicker fx:id="dpFromDate" prefHeight="32.0" style="-fx-background-color: #d1fae5; -fx-background-radius: 10; -fx-border-color: #6ee7b7; -fx-border-radius: 10; -fx-font-size: 13px;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <DatePicker fx:id="dpToDate" prefHeight="32.0" style="-fx-background-color: #d1fae5; -fx-background-radius: 10; -fx-border-color: #6ee7b7; -fx-border-radius: 10; -fx-font-size: 13px;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <ComboBox fx:id="cmbFilter" prefHeight="32.0" prefWidth="271.0" style="-fx-background-color: #d1fae5; -fx-border-color: #6ee7b7; -fx-border-radius: 10; -fx-background-radius: 10; -fx-font-size: 13px;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            </GridPane>
+
+            <HBox alignment="CENTER_RIGHT" spacing="10.0" style="-fx-padding: 6 0 0 0;">
+                <children>
+                    <Button fx:id="btnGenerate" prefHeight="36.0" prefWidth="120.0" style="-fx-background-color: #10b981; -fx-background-radius: 10; -fx-text-fill: white; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-font-weight: bold; -fx-cursor: hand;" text="📊 Generate">
+                        <font><Font name="Arial Bold" size="13.0" /></font>
+                    </Button>
+                    <Button fx:id="btnExport" prefHeight="36.0" prefWidth="120.0" style="-fx-background-color: #3b82f6; -fx-background-radius: 10; -fx-text-fill: white; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-font-weight: bold; -fx-cursor: hand;" text="📥 Export PDF">
+                        <font><Font name="Arial Bold" size="13.0" /></font>
+                    </Button>
+                    <Button fx:id="btnPrint" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #6b7280; -fx-background-radius: 10; -fx-text-fill: white; -fx-font-family: 'Arial'; -fx-font-size: 13px; -fx-font-weight: bold; -fx-cursor: hand;" text="🖨️ Print">
+                        <font><Font name="Arial Bold" size="13.0" /></font>
+                    </Button>
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+
+    <!-- Report Cards -->
+    <GridPane hgap="20.0" vgap="20.0" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="200.0" percentWidth="50.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="200.0" percentWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="200.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="200.0" vgrow="ALWAYS" />
+        </rowConstraints>
+
+        <!-- Card 1: Therapist Performance -->
+        <VBox style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 4);">
+            <padding>
+                <Insets bottom="16.0" left="18.0" right="18.0" top="16.0" />
+            </padding>
+            <children>
+                <Label text="Therapist Performance" textFill="#1f2937">
+                    <font><Font name="Arial Bold" size="15.0" /></font>
+                </Label>
+                <Label fx:id="lblTherapistPerformance" text="Select filters and click Generate" textFill="#6b7280" VBox.vgrow="ALWAYS">
+                    <font><Font name="Arial" size="13.0" /></font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+
+        <!-- Card 2: Financial Summary -->
+        <VBox style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 4);" GridPane.columnIndex="1">
+            <padding>
+                <Insets bottom="16.0" left="18.0" right="18.0" top="16.0" />
+            </padding>
+            <children>
+                <Label text="Financial Summary" textFill="#1f2937">
+                    <font><Font name="Arial Bold" size="15.0" /></font>
+                </Label>
+                <Label fx:id="lblFinancialSummary" text="Select filters and click Generate" textFill="#6b7280" VBox.vgrow="ALWAYS">
+                    <font><Font name="Arial" size="13.0" /></font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+
+        <!-- Card 3: Session Statistics -->
+        <VBox style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 4);" GridPane.rowIndex="1">
+            <padding>
+                <Insets bottom="16.0" left="18.0" right="18.0" top="16.0" />
+            </padding>
+            <children>
+                <Label text="Session Statistics" textFill="#1f2937">
+                    <font><Font name="Arial Bold" size="15.0" /></font>
+                </Label>
+                <Label fx:id="lblSessionStats" text="Select filters and click Generate" textFill="#6b7280" VBox.vgrow="ALWAYS">
+                    <font><Font name="Arial" size="13.0" /></font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+
+        <!-- Card 4: Patient Enrollment -->
+        <VBox style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 4);" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <padding>
+                <Insets bottom="16.0" left="18.0" right="18.0" top="16.0" />
+            </padding>
+            <children>
+                <Label text="Patient Enrollment" textFill="#1f2937">
+                    <font><Font name="Arial Bold" size="15.0" /></font>
+                </Label>
+                <Label fx:id="lblPatientEnrollment" text="Select filters and click Generate" textFill="#6b7280" VBox.vgrow="ALWAYS">
+                    <font><Font name="Arial" size="13.0" /></font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+    </GridPane>
+
+</VBox>

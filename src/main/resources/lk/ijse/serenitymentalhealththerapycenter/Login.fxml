@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.serenitymentalhealththerapycenter.controller.LoginController">
+
+    <children>
+        <HBox fx:id="mainContainer" prefHeight="600.0" prefWidth="900.0">
+
+            <!-- LEFT SIDE — Branding Panel -->
+            <VBox fx:id="brandingPanel" alignment="CENTER" minWidth="320.0" prefWidth="380.0" style="-fx-background-color: linear-gradient(to bottom, #10b981, #059669);" HBox.hgrow="SOMETIMES">
+                <children>
+
+                    <VBox alignment="CENTER" spacing="8.0" VBox.vgrow="ALWAYS">
+                        <children>
+                            <ImageView fitHeight="72.0" fitWidth="150.0" preserveRatio="true">
+                                <image>
+                                    <!-- FIXED: relative path from FXML location to image -->
+                                    <Image url="@../../../image/img.png" />
+                                </image>
+                            </ImageView>
+
+                            <Label text="Serenity" textFill="white">
+                                <font><Font name="Arial Bold" size="36.0" /></font>
+                            </Label>
+
+                            <Label text="Mental Health Therapy Center" textFill="#d1fae5">
+                                <font><Font name="Arial" size="14.0" /></font>
+                            </Label>
+
+                            <Label alignment="CENTER" maxWidth="280.0" text="Empowering minds, transforming lives." textFill="#a7f3d0" wrapText="true">
+                                <font><Font name="Arial" size="13.0" /></font>
+                                <VBox.margin>
+                                    <Insets top="8.0" />
+                                </VBox.margin>
+                            </Label>
+
+                        </children>
+                    </VBox>
+
+                </children>
+            </VBox>
+
+            <!-- RIGHT SIDE — Login Form -->
+            <VBox fx:id="loginPanel" alignment="CENTER" minWidth="400.0" prefWidth="520.0" style="-fx-background-color: #f0fdf4;" HBox.hgrow="ALWAYS">
+                <padding>
+                    <Insets bottom="40.0" left="50.0" right="50.0" top="40.0" />
+                </padding>
+                <children>
+
+                    <VBox maxWidth="450.0" spacing="6.0" VBox.vgrow="NEVER">
+                        <children>
+
+                            <!-- Header -->
+                            <Label text="🔐" style="-fx-font-size: 34px;" />
+
+                            <Label text="Welcome Back," textFill="#1f2937">
+                                <font><Font name="Arial Bold" size="30.0" /></font>
+                            </Label>
+
+                            <Label text="Sign in to manage therapy records" textFill="#6b7280">
+                                <font><Font name="Arial" size="14.0" /></font>
+                            </Label>
+
+                            <Pane prefHeight="20.0" />
+
+                            <!-- Username -->
+                            <Label text="Username" textFill="#374151">
+                                <font><Font name="Arial Bold" size="13.0" /></font>
+                            </Label>
+
+                            <TextField fx:id="txtUsername" maxWidth="1.7976931348623157E308" prefHeight="48.0" promptText="Enter your username" style="-fx-background-color: #d1fae5; -fx-background-radius: 12; -fx-border-color: #6ee7b7; -fx-border-radius: 12; -fx-padding: 0 0 0 15; -fx-font-size: 13px;" />
+
+                            <Pane prefHeight="14.0" />
+
+                            <!-- Password -->
+                            <Label text="Password" textFill="#374151">
+                                <font><Font name="Arial Bold" size="13.0" /></font>
+                            </Label>
+
+                            <StackPane maxWidth="1.7976931348623157E308">
+                                <children>
+                                    <PasswordField fx:id="txtPassword" maxWidth="1.7976931348623157E308" prefHeight="48.0" promptText="Enter your password" style="-fx-background-color: #d1fae5; -fx-background-radius: 12; -fx-border-color: #6ee7b7; -fx-border-radius: 12; -fx-padding: 0 0 0 15; -fx-font-size: 13px;" />
+                                    <TextField fx:id="txtPasswordVisible" managed="false" maxWidth="1.7976931348623157E308" prefHeight="48.0" promptText="Enter your password" style="-fx-background-color: #d1fae5; -fx-background-radius: 12; -fx-border-color: #6ee7b7; -fx-border-radius: 12; -fx-padding: 0 0 0 15; -fx-font-size: 13px;" visible="false" />
+                                </children>
+                            </StackPane>
+
+                            <!-- Show Password -->
+                            <CheckBox fx:id="showPasswordCheckBox" text="Show Password" textFill="#4b5563">
+                                <font><Font name="Arial" size="12.0" /></font>
+                                <VBox.margin>
+                                    <Insets top="4.0" />
+                                </VBox.margin>
+                            </CheckBox>
+
+                            <Pane prefHeight="14.0" />
+
+                            <!-- Login As -->
+                            <Label text="Login As" textFill="#374151">
+                                <font><Font name="Arial Bold" size="13.0" /></font>
+                            </Label>
+
+                            <ComboBox fx:id="cmbRole" maxWidth="1.7976931348623157E308" prefHeight="44.0" style="-fx-background-color: #d1fae5; -fx-border-color: #6ee7b7; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 13px;" />
+
+                            <Pane prefHeight="24.0" />
+
+                            <!-- Login Button -->
+                            <Button fx:id="btnLogin" maxWidth="1.7976931348623157E308" prefHeight="48.0" style="-fx-background-color: #10b981; -fx-background-radius: 24; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-cursor: hand; -fx-border-color: transparent;" text="LOGIN">
+                                <font><Font name="Arial Bold" size="16.0" /></font>
+                            </Button>
+
+                            <!-- Error Label -->
+                            <Label fx:id="lblError" alignment="CENTER" maxWidth="1.7976931348623157E308" textFill="#dc2626" visible="false" wrapText="true">
+                                <font><Font name="Arial Bold" size="12.0" /></font>
+                                <VBox.margin>
+                                    <Insets top="8.0" />
+                                </VBox.margin>
+                            </Label>
+
+                        </children>
+                    </VBox>
+
+                </children>
+            </VBox>
+
+        </HBox>
+    </children>
+
+</StackPane>
