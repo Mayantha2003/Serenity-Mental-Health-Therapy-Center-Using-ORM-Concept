@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- JDBC Driver -->
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <!-- Database URL -->
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/serenity_therapy_db?createDatabaseIfNotExist=true&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC
+        </property>
+
+        <!-- Database Username -->
+        <property name="hibernate.connection.username">
+            root
+        </property>
+
+        <!-- Database Password -->
+        <property name="hibernate.connection.password">
+            mysql
+        </property>
+
+        <!-- SQL Dialect -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+
+        <!-- Show SQL Queries -->
+        <property name="hibernate.show_sql">
+            true
+        </property>
+
+        <!-- Format SQL -->
+        <property name="hibernate.format_sql">
+            true
+        </property>
+
+        <!-- Auto Table Update -->
+        <property name="hibernate.hbm2ddl.auto">
+            update
+        </property>
+
+        <!-- Connection Pool Size -->
+        <property name="hibernate.connection.pool_size">
+            10
+        </property>
+
+        <!-- Entity Classes -->
+        <mapping class="lk.ijse.serenitymentalhealththerapycenter.entity.User"/>
+
+        <!--        <mapping class="lk.ijse.serenitymentalhealththerapycenter.entity.Patient"/>-->
+        <!--        <mapping class="lk.ijse.serenitymentalhealththerapycenter.entity.Therapist"/>-->
+        <!--        <mapping class="lk.ijse.serenitymentalhealththerapycenter.entity.TherapyProgram"/>-->
+        <!--        <mapping class="lk.ijse.serenitymentalhealththerapycenter.entity.TherapySession"/>-->
+        <!--        <mapping class="lk.ijse.serenitymentalhealththerapycenter.entity.Payment"/>-->
+
+    </session-factory>
+
+</hibernate-configuration>

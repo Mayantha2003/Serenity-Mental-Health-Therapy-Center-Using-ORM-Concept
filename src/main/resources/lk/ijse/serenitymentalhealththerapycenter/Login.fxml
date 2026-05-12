@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.serenitymentalhealththerapycenter.controller.LoginController">
+<StackPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.serenitymentalhealththerapycenter.controller.LoginController">
 
     <children>
         <HBox fx:id="mainContainer" prefHeight="600.0" prefWidth="900.0">
@@ -65,7 +65,7 @@
                         <children>
 
                             <!-- Header -->
-                            <Label text="🔐" style="-fx-font-size: 34px;" />
+                            <Label style="-fx-font-size: 34px;" text="🔐" />
 
                             <Label text="Welcome Back," textFill="#1f2937">
                                 <font><Font name="Arial Bold" size="30.0" /></font>
@@ -118,7 +118,7 @@
                             <Pane prefHeight="24.0" />
 
                             <!-- Login Button -->
-                            <Button fx:id="btnLogin" maxWidth="1.7976931348623157E308" prefHeight="48.0" style="-fx-background-color: #10b981; -fx-background-radius: 24; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-cursor: hand; -fx-border-color: transparent;" text="LOGIN">
+                            <Button fx:id="btnLogin" maxWidth="1.7976931348623157E308" onAction="#btnLoginOnAction" prefHeight="48.0" style="-fx-background-color: #10b981; -fx-background-radius: 24; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-cursor: hand; -fx-border-color: transparent;" text="LOGIN">
                                 <font><Font name="Arial Bold" size="16.0" /></font>
                             </Button>
 
